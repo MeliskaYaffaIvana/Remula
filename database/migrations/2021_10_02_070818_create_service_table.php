@@ -15,8 +15,8 @@ class CreateServiceTable extends Migration
     {
         Schema::create('service', function (Blueprint $table) {
             $table->id('ID_service');
-            $table->unsignedBigInteger('ID_serviceProvider');
-            $table->foreign('ID_serviceProvider')->references('ID_serviceProvider')->on('service_provider')->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedBigInteger('ID_user');
+            $table->foreign('ID_user')->references('ID_user')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->string('service_name');
             $table->mediumText('description');
             $table->integer('price');

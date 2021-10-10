@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProviderController;
+use App\Http\Controllers\CustomerController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +21,22 @@ Route::get('/', function () {
     return view('pages.home');
 });
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Auth::routes();
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::middleware(['auth'])->group(function(){
+    Route::middleware(['provider'])->group(function () {
+        Route::get('provider', [ProviderController::class, 'index']);
+
+});
+Route::middleware(['customer'])->group(function () {
+    Route::get('customer', [CustomerController::class, 'index']);
+});
+
+Route::get('/logout', function() {
+    Auth::logout();
+    redirect('/');
+});
+
+});
+

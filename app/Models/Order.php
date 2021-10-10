@@ -13,7 +13,7 @@ class Order extends Model
     protected $table = 'order';
     protected $primaryKey = 'ID_order';
     protected $fillable = [
-        'ID_customer',
+        'ID_user',
         'ID_service',
         'cost',
         'order_date',

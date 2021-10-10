@@ -11,7 +11,7 @@ class Service extends Model
     protected $table = 'service';
     protected $primaryKey = 'ID_service';
     protected $fillable = [
-        'ID_serviceProvider',
+        'ID_user',
         'service_name',
         'description',
         'price',

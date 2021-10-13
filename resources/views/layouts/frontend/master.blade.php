@@ -57,7 +57,6 @@ https://templatemo.com/tm-548-training-studio
                             <li class="scroll-to-section"><a href="#features">About</a></li>
                             <li class="scroll-to-section"><a href="#our-classes">Service</a></li>
                             <li class="scroll-to-section"><a href="#contact-us">Contact</a></li> 
-                            <li class="main-button"><a href="{{route('register') }}">Sign Up</a></li>
                             <li class="main-button"><a href="{{route('login') }}">Sign In</a></li>
                         </ul>        
                         <a class='menu-trigger'>
@@ -80,7 +79,7 @@ https://templatemo.com/tm-548-training-studio
                 <h6>PERMUDAH SEGALANYA DENGAN</h6>
                 <img src="assets/images/logo.png" width="550">
                 <div class="main-button scroll-to-section">
-                    <a href="#features">Become a member</a>
+                    <a href="{{ route ('register')}}">Become a member</a>
                 </div>
             </div>
         </div>

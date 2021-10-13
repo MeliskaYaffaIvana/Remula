@@ -72,8 +72,10 @@
                             <label for="role" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>
 
                             <div class="col-md-6">
-                                <input id="role" type="text" class="form-control @error('role') is-invalid @enderror" name="role" value="{{ old('role') }}" required autocomplete="role" autofocus>
-                                <h6>You can type provider or customer for role depends on your concern</h6>
+                                <select name="role" class="form-control @error('role') is-invalid @enderror">
+                                    <option value="provider">Provider</option>
+                                    <option value="customer">Customer</option>
+                                </select>
                                 @error('address')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

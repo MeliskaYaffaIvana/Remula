@@ -27,10 +27,11 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::middleware(['auth'])->group(function(){
     Route::middleware(['provider'])->group(function () {
         Route::get('provider', [ProviderController::class, 'index']);
+    });
+    Route::middleware(['customer'])->group(function () {
+        Route::get('customer', [CustomerController::class, 'index']);
+        });
 
-});
-Route::middleware(['customer'])->group(function () {
-    Route::get('customer', [CustomerController::class, 'index']);
 });
 
 Route::get('/logout', function() {
@@ -38,5 +39,4 @@ Route::get('/logout', function() {
     redirect('/');
 });
 
-});
 

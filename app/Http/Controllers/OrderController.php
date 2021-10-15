@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Auth;
-use App\Models\Service;
 
-class ProviderController extends Controller
+
+class OrderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +14,7 @@ class ProviderController extends Controller
      */
     public function index()
     {
-        $user = Auth::user();
-        // dd(Auth::user()->ID_user);
-        return view('provider.index', compact('user'));
+        //
     }
 
     /**
@@ -72,7 +69,7 @@ class ProviderController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+        //
     }
 
     /**

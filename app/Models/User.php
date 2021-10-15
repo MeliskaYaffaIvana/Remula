@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-use App\Models\Customer;
+use App\Models\Service;
 use App\Models\ServiceProvider;
 
 class User extends Authenticatable
@@ -47,4 +47,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function service(){
+        return $this->hasMany(Service::class);
+    }
 }

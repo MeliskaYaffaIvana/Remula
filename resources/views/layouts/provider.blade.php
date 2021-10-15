@@ -54,7 +54,7 @@ https://templatemo.com/tm-548-training-studio
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li class="btn btn-active"><a href="#">Workshop Saya</a></li>
-                            <li class="btn btn-active"><a href="#">Jasa Saya</a></li>
+                            <li class="btn btn-active"><a href="{{ route('service.index')}}">Jasa Saya</a></li>
                             <li class="btn btn-active"><a href="#">Transaksi</a></li>
                             <li class="btn btn-active"><a href="#">Bantuan</a></li>
                              <!-- Right Side Of Navbar -->

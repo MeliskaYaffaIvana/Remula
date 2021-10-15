@@ -15,10 +15,13 @@ class HomeController extends Controller
     public function index()
     {
         $role = Auth::user()->role;
+        // dd($role);
         if($role == "provider"){
             return redirect()->to('provider');
+            
         } else if($role == "customer"){
             return redirect()->to('customer');
+            
         } else {
             return redirect()->to('logout');
         }

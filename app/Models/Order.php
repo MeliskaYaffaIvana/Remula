@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\customer;
+use App\Models\User;
 use App\Models\Service;
 
 class Order extends Model
@@ -20,4 +20,8 @@ class Order extends Model
         'service_date',
         'status_payment',
     ];
+    public function customer()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

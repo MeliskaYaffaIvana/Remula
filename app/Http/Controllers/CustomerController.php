@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
+use App\Models\Service;
 
 class CustomerController extends Controller
 {
@@ -15,7 +16,8 @@ class CustomerController extends Controller
     public function index()
     {
         $user = Auth::user();
-        return view('customer.index', compact('user'));
+        $service = Service::all();
+        return view('customer.index', compact('user', 'service'));
         
     }
 

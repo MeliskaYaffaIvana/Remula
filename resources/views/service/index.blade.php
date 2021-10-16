@@ -5,11 +5,7 @@
 @endsection
 
 @section('content')
-<main class="main">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item">Home</li>
-        <li class="breadcrumb-item active">service</li>
-    </ol>
+<main class="main"><br><br><br><br>
     <div class="container-fluid">
         <div class="animated fadeIn">
             <div class="row">

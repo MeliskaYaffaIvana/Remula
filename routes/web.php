@@ -5,7 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProviderController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ServiceController;
-
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,7 +33,9 @@ Route::middleware(['auth'])->group(function(){
     });
     Route::middleware(['customer'])->group(function () {
         Route::get('customer', [CustomerController::class, 'index']);
-        });
+        
+        Route::resource('order', OrderController::class);
+    });
 
 });
 

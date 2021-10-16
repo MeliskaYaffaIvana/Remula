@@ -3,10 +3,7 @@
 
 @section('content')
 <main class="main">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item">Home</li>
-        <li class="breadcrumb-item active">service</li>
-    </ol>
+    
     <div class="container-fluid">
         <div class="animated fadeIn">
             <form action="{{ route('service.update', $service->ID_service) }}" method="post" enctype="multipart/form-data" >

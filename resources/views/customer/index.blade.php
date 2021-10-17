@@ -3,25 +3,25 @@
  <!-- ***** Features Item Start ***** -->
  
 <!-- ***** Our Classes Start ***** -->
-<section class="section" id="our-classes">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 offset-lg-3">
-                <div class="section-heading">
-                    <h2>Workshop <em>Saya</em></h2>
-                    <img src="assets/images/line-dec.png" alt="">
-                    <p></p>
+<header class="bg-dark py-5">
+            <div class="container px-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-4">
+                        <div class="text-center my-5">
+                            <h1 class="display-5 fw-bolder text-white mb-2">Remula adalah </h1>
+                            <p class="lead text-white-50 mb-4">aplikasi berbasis web yang membantu masyarakat dalam mencari dan menemukan teknisi yang dapat memperbaiki barang disekitar kita.
+								Dengan aplikasi ini kita dapat membuat waktu lebih efisien dan mudah dalam memperbaiki barang.
+							</p>
+                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                                <a class="btn btn-primary btn-lg px-4 me-sm-3" href="{{route('order.index')}}">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <section class="feature_product_area section_gap">
+        </header>
 		<div class="main_box">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="main_title">
-						<h2>Produk Terbaru</h2>
-						<p>Tampil trendi dengan kumpulan produk kekinian kami.</p>
-					</div>
-				</div>
+
 				<div class="row">
                     @forelse($service as $serv)
 					<div class="col col1">

@@ -34,6 +34,8 @@ Route::middleware(['auth'])->group(function(){
     Route::middleware(['customer'])->group(function () {
         Route::get('customer', [CustomerController::class, 'index']);
         
+        Route::resource('serv', ServController::class);
+
         Route::resource('order', OrderController::class);
     });
 

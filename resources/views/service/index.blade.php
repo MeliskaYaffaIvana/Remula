@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+<header class="bg-dark py-5">
 <main class="main"><br><br><br><br>
     <div class="container-fluid">
         <div class="animated fadeIn">
@@ -30,7 +31,7 @@
 
                             <form action="{{ route('service.index') }}" method="get">
                                 <div class="input-group mb-3 col-md-3 float-right">
-                                    <input type="text" name="search" class="form-control" placeholder="Cari..." value="{{ request()->q }}">
+                                    <input type="text" name="search" class="form-control" placeholder="Cari..." value="{{ request()->search }}">
                                     <div class="input-group-append">
                                         <button class="btn btn-secondary" type="button">Cari</button>
                                     </div>

@@ -53,7 +53,7 @@ https://templatemo.com/tm-548-training-studio
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li class="btn btn-active"><a href="#">Service</a></li>
+                            <li class="btn btn-active"><a href="{{ route('customer.index')}}">Service</a></li>
                             <li class="btn btn-active"><a href="#">Order</a></li>
                             <li class="btn btn-active"><a href="#">Pesanan</a></li>
                             <li class="btn btn-active"><a href="#">Chat Penyedia Jasa</a></li>

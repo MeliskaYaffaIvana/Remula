@@ -1,8 +1,8 @@
 @extends('layouts.provider')
 @section('content')
- <!-- ***** Features Item Start ***** -->
  
 <!-- ***** Our Classes Start ***** -->
+
 <section class="section" id="our-classes">
     <div class="container">
         <div class="row">

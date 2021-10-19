@@ -1,8 +1,8 @@
-@extends('layouts.provider')
+@extends('layouts.layout')
 
 
 @section('content')
-<main class="main">
+<main class="main"><br>
    
     <div class="container-fluid">
         <div class="animated fadeIn">
@@ -16,7 +16,7 @@
                             </div>
                             <div class="card-body">
                             <div class="form-group">
-                                <input type = "text" name = "IDuser" value = "{{$IDuser}}" > 
+                            <input type = "text" name = "IDuser" value = "{{$IDuser}}" >
                                 <label for="User">Username</label>
                                     <input type="text" name="username" class="form-control" value="{{$user->username}}" required> 
                                     
@@ -43,7 +43,8 @@
                                     <p class="text-danger">{{ $errors->first('price') }}</p>
                                 </div>
                                 <div class="form-group">
-                                    <button class="btn btn-primary btn-sm">Tambah</button>
+                                    <button class="btn btn-primary btn-sm">Add</button>
+                                    <a href="{{ route('service.index') }}" class="btn btn-sm btn-danger">Cancel </a>
                                 </div>
                             </div>
                         </div>

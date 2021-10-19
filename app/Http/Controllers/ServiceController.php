@@ -15,7 +15,8 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $service = Service::with('user')->get();
+        $IDuser =Auth::user()->ID_user;
+        $service = Service::with('user')->where('ID_user', $IDuser)->get();
         $paginate = Service::orderBy('ID_service', 'asc')->paginate(3);
         return view ('service.index', ['service' => $service, 'paginate'=>$paginate]);
     }

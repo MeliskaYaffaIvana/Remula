@@ -6,6 +6,7 @@ use App\Http\Controllers\ProviderController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +36,12 @@ Route::middleware(['auth'])->group(function(){
         Route::resource('customer', CustomerController::class);
         Route::resource('service', ServiceController::class);
         Route::resource('order', OrderController::class);
+        Route::get('/cart', 'CartController@index')->name('cart.index');
+        Route::post('/cart/{product}', 'CartController@store')->name('cart.store');
+        Route::patch('/cart/{product}', 'CartController@update')->name('cart.update');
+        Route::delete('/cart/{product}', 'CartController@destroy')->name('cart.destroy');
+        Route::post('/cart/switchToSaveForLater/{product}', 'CartController@switchToSaveForLater')->name('cart.switchToSaveForLater');
+
     });
 
 });

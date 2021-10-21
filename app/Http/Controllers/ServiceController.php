@@ -65,8 +65,11 @@ class ServiceController extends Controller
      */
     public function show($ID_service)
     {
+       
         $service = Service::with('user')->where('ID_service', $ID_service)->first();
+       // dd($service->user->username);    
         return view('service.detail', compact('service'));
+
     }
 
     /**

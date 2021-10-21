@@ -18,7 +18,7 @@
                             <div class="card-body">
                                 <div class="form-group">
                                    
-                                    <label for="User">Provider</label>
+                                    <label for="User">Provider</label><br>
                                     <input type="text" name="username" class="form-control" value="{{ $user->username }}" required>
                                 </div>
                                 <div class="form-group">

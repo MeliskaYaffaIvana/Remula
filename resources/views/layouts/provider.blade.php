@@ -43,7 +43,7 @@ https://templatemo.com/tm-548-training-studio
     
     
     <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky">
+    <header class="header-area header-sticky bg-dark">
         <div class="container">
             <div class="row" color="green">
                 <div class="col-12">

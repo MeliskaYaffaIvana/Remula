@@ -33,7 +33,7 @@ Route::middleware(['auth'])->group(function(){
     });
     Route::middleware(['customer'])->group(function () {
         Route::resource('customer', CustomerController::class);
-
+        Route::resource('service', ServiceController::class);
         Route::resource('order', OrderController::class);
     });
 

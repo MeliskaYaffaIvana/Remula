@@ -16,7 +16,7 @@
                             </div>
                             <div class="card-body">
                             <div class="form-group">
-                            <input type = "text" name = "IDuser" value = "{{$IDuser}}" >
+                            <input type = "text" name = "IDuser" value = "{{$IDuser}}" ><br>
                                 <label for="User">Username</label>
                                     <input type="text" name="username" class="form-control" value="{{$user->username}}" required> 
                                     

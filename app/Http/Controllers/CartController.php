@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Product;
+use App\Models\Service;
 use Illuminate\Http\Request;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\Facades\Validator;
@@ -16,7 +16,8 @@ class CartController extends Controller
      */
     public function index()
     {
-        $mightAlsoLike = Product::mightAlsoLike()->get();
+        
+        $mightAlsoLike = Service::mightAlsoLike()->get();
 
         return view('cart')->with([
             'mightAlsoLike' => $mightAlsoLike,

@@ -1,4 +1,4 @@
-@include('layouts.customer')
+@include('layouts.layout')
 
           <table class="table table-striped" id="tableokrole">
                   <thead>
@@ -25,12 +25,13 @@
 
                       </td> 
                     </tr>
-                   
+                    
                   </tbody>
                 </table>
 
        
       </div>
    
-
+      <a href="{{ route('customer.index') }}" class="btn btn-sm btn-danger">Cancel </a>
+      <a href="{{ route('cart.index') }}" class="btn btn-sm btn-danger">Order </a>
   </div>

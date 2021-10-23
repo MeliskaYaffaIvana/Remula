@@ -40,6 +40,7 @@ Route::middleware(['auth'])->group(function(){
         Route::post('/cart/{product}', 'CartController@store')->name('cart.store');
         Route::patch('/cart/{product}', 'CartController@update')->name('cart.update');
         Route::delete('/cart/{product}', 'CartController@destroy')->name('cart.destroy');
+        Route::resource('cart', CartController::class);
         Route::post('/cart/switchToSaveForLater/{product}', 'CartController@switchToSaveForLater')->name('cart.switchToSaveForLater');
 
     });

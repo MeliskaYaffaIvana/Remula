@@ -36,6 +36,7 @@ Route::middleware(['auth'])->group(function(){
         Route::resource('customer', CustomerController::class);
         Route::resource('service', ServiceController::class);
         Route::resource('order', OrderController::class);
+<<<<<<< HEAD
         Route::get('/cart', 'CartController@index')->name('cart.index');
         Route::post('/cart/{product}', 'CartController@store')->name('cart.store');
         Route::patch('/cart/{product}', 'CartController@update')->name('cart.update');
@@ -43,6 +44,8 @@ Route::middleware(['auth'])->group(function(){
         Route::resource('cart', CartController::class);
         Route::post('/cart/switchToSaveForLater/{product}', 'CartController@switchToSaveForLater')->name('cart.switchToSaveForLater');
 
+=======
+>>>>>>> 1c92386023804d8efdfd983d87f53da3bed15edd
     });
 
 });
